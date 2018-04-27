@@ -1,0 +1,6 @@
+- name: flask install 
+  shell: pip3 install flask==1.0
+  
+
+  
+    

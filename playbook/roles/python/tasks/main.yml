@@ -1,0 +1,20 @@
+- name: pyhton 
+  yum:
+    name: https://centos7.iuscommunity.org/ius-release.rpm
+    state: present
+
+- name: python install
+  yum: 
+    name: "{{item}}"
+    state: present
+  with_items:
+    - python36u 
+    - python36u-libs
+    - python36u-devel
+    - python36u-pip
+
+- name: command cut     
+  file: src=/bin/python3.6 dest=/bin/python3 state=link
+
+- name: command cut2
+  file: src=/bin/pip3.6 dest=/bin/pip3 state=link 
