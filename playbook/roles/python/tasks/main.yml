@@ -1,4 +1,4 @@
-- name: pyhton 
+- name: python 
   yum:
     name: https://centos7.iuscommunity.org/ius-release.rpm
     state: present
